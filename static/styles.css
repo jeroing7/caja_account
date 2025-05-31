@@ -18,6 +18,10 @@ body {
   max-width: 480px;
   margin: 40px auto;
   padding: 20px;
+  background-color: #FEFDF9;      /* 연한 아이보리 배경 (내용 영역) */
+  border: 2px solid #5A4A3F;      /* 진한 갈색 테두리 */
+  border-radius: 10px;            /* 살짝 둥근 모서리 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* 제목 스타일 (Ghibli 감성을 위해 브러시 계열 서체 사용) */
@@ -53,6 +57,94 @@ form {
 .form-group input {
   padding: 10px 14px;
   font-size: 1rem;
-  border: 1px solid #D3C1AB; /* 부드러운 베이지 색 테두리 */
+  border: 1px solid #D3C1AB;  /* 부드러운 베이지 색 테두리 */
   border-radius: 8px;
-  background-
+  background-color: #FFFFFF;  /* 흰색 배경으로 변경 */
+  color: #3C2F2F;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input::placeholder {
+  color: #B0A290; /* 연한 회갈색 플레이스홀더 */
+}
+
+.form-group input:focus {
+  border-color: #C59F5F; /* 버튼과 통일된 따뜻한 색 강조 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 검색 버튼 스타일 */
+button#search-btn {
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF9F4; /* 연한 아이보리 텍스트 */
+  background-color: #C59F5F; /* 따뜻한 갈색톤 버튼 */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button#search-btn:hover {
+  background-color: #B18E55; /* 호버 시 약간 진해진 색 */
+  transform: translateY(-1px);
+}
+
+button#search-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 결과 섹션 기본 숨김 처리 */
+.hidden {
+  display: none;
+}
+
+/* 결과 섹션 노출 시 스타일 */
+#result {
+  margin-top: 30px;
+  background-color: #FEFDF9; /* 아주 연한 아이보리 배경 */
+  border-left: 4px solid #C59F5F; /* 강조된 따뜻한 색 선 */
+  padding: 16px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#result h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #3C2F2F;
+}
+
+#result p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+#result p strong {
+  color: #5A4A3F; /* 텍스트 강조용 다크 브라운 */
+}
+
+/* 반응형: 모바일 화면에서 입력 박스가 꽉 차도록 */
+@media (max-width: 500px) {
+  .container {
+    margin: 20px 16px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-group input {
+    font-size: 0.95rem;
+  }
+
+  button#search-btn {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}
