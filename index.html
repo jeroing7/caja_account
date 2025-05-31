@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>학생 Google 계정 검색</title>
+
+  <!-- 스타일시트 -->
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Google 계정 검색</h1>
+
+    <!-- 학번‧이름 입력 폼 -->
+    <form id="search-form">
+      <div class="form-group">
+        <label for="student-number">학번</label>
+        <input
+          type="text"
+          id="student-number"
+          name="studentNumber"
+          placeholder="예: 20241234"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="student-name">이름</label>
+        <input
+          type="text"
+          id="student-name"
+          name="studentName"
+          placeholder="예: 홍길동"
+          required
+        />
+      </div>
+
+      <button type="submit" id="search-btn">검색</button>
+    </form>
+
+    <!-- 검색 결과 표시 -->
+    <section id="result" class="result hidden">
+      <h2>검색 결과</h2>
+      <p><strong>ID:</strong> <span id="account-id"></span></p>
+      <p><strong>PW:</strong> <span id="account-pw"></span></p>
+    </section>
+  </main>
+
+  <!-- 스크립트 -->
+  <script src="static/script.js"></script>
+</body>
+</html>

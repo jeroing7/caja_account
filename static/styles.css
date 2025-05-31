@@ -1,0 +1,58 @@
+/* static/styles.css */
+
+/* 구글 폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Nanum+Brush+Script&display=swap');
+
+/* 전체 화면 베이스 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF8E7; /* 부드러운 크림색 배경 */
+  color: #3C2F2F; /* 따뜻한 갈색 텍스트 */
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+}
+
+/* 페이지 중앙 컨테이너 */
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* 제목 스타일 (Ghibli 감성을 위해 브러시 계열 서체 사용) */
+h1 {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3C2F2F;
+}
+
+/* 폼 내부 요소 레이아웃 */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 입력 그룹(레이블 + 인풋) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 레이블 스타일 */
+.form-group label {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* 텍스트 입력 상자 스타일 */
+.form-group input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #D3C1AB; /* 부드러운 베이지 색 테두리 */
+  border-radius: 8px;
+  background-
