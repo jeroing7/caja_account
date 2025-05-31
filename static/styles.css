@@ -1,174 +1,133 @@
 /* static/styles.css */
 
-/* ---------------------------------------------------
-   1) 구글 폰트 불러오기
---------------------------------------------------- */
+/* 구글 폰트 불러오기 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Nanum+Brush+Script&display=swap');
 
-
-/* ---------------------------------------------------
-   2) 전역 스타일: 배경색, 기본 폰트, 텍스트 색상
---------------------------------------------------- */
+/* 전체 화면 베이스 스타일 */
 body {
   margin: 0;
   padding: 0;
-  background-color: #EAF6FF; /* 연한 하늘색 계열 배경 */
-  color: #134E7D;             /* 진한 네이비 블루 텍스트 */
+  background-color: #FFF8E7; /* 부드러운 크림색 배경 */
+  color: #3C2F2F; /* 따뜻한 갈색 텍스트 */
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.6;
 }
 
-/* ---------------------------------------------------
-   3) 컨테이너: 가운데 정렬 + 두꺼운 파란색 테두리
---------------------------------------------------- */
+/* 페이지 중앙 컨테이너 */
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 30px auto;
+  max-width: 480px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #FFFFFF;   /* 흰색 배경으로 내용을 강조 */
-  border: 2px solid #22669E;   /* 진한 파란색 테두리 */
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 제목 스타일 (Ghibli 감성을 위해 브러시 계열 서체 사용) */
 h1 {
   font-family: 'Nanum Brush Script', cursive;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #134E7D; /* 네이비 블루 */
+  color: #3C2F2F;
 }
 
-
-/* ---------------------------------------------------
-   4) 레이아웃: 왼쪽•오른쪽 2단 형태
---------------------------------------------------- */
-.layout {
-  display: flex;
-  gap: 30px;
-}
-
-/* 좌/우 영역 각각 flex 비율(1:1) */
-.left,
-.right {
-  flex: 1;
-}
-
-/* 작은 화면일 때: 세로로 쌓기 */
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-
-/* ---------------------------------------------------
-   5) 왼쪽: 입력 폼 스타일
---------------------------------------------------- */
+/* 폼 내부 요소 레이아웃 */
 form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* 입력 그룹(레이블 + 인풋) */
 .form-group {
   display: flex;
   flex-direction: column;
 }
 
+/* 레이블 스타일 */
 .form-group label {
   font-weight: 700;
   margin-bottom: 6px;
   font-size: 0.95rem;
-  color: #134E7D;
 }
 
+/* 텍스트 입력 상자 스타일 */
 .form-group input {
-  padding: 12px 14px;
+  padding: 10px 14px;
   font-size: 1rem;
-  border: 1px solid #79AFFF;    /* 연한 파란색 테두리 */
+  border: 1px solid #D3C1AB; /* 부드러운 베이지 색 테두리 */
   border-radius: 8px;
-  background-color: #F0F8FF;     /* 아주 연한 하늘색 배경 */
-  color: #134E7D;
+  background-color: #FEFDF9; /* 아주 연한 아이보리 배경 */
+  color: #3C2F2F;
   outline: none;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .form-group input::placeholder {
-  color: #A0C4FF; /* 연한 블루 계열 플레이스홀더 */
+  color: #B0A290; /* 연한 회갈색 플레이스홀더 */
 }
 
 .form-group input:focus {
-  border-color: #22669E; /* 짙은 파란색 포커스 */
-  box-shadow: 0 2px 8px rgba(34, 102, 158, 0.2);
+  border-color: #C59F5F; /* 버튼과 통일된 따뜻한 색 강조 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 검색 버튼 스타일 */
 button#search-btn {
-  padding: 14px 0;
+  padding: 12px 0;
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;          /* 버튼 텍스트 흰색 */
-  background-color: #22669E; /* 진한 파란색 버튼 */
+  color: #FFF9F4; /* 연한 아이보리 텍스트 */
+  background-color: #C59F5F; /* 따뜻한 갈색톤 버튼 */
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(34, 102, 158, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 button#search-btn:hover {
-  background-color: #1B547B; /* 약간 더 짙은 네이비 블루 */
+  background-color: #B18E55; /* 호버 시 약간 진해진 색 */
   transform: translateY(-1px);
 }
 
 button#search-btn:active {
   transform: translateY(1px);
-  box-shadow: 0 1px 4px rgba(34, 102, 158, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-/* ---------------------------------------------------
-   6) 오른쪽: 결과 표시 영역 스타일
---------------------------------------------------- */
+/* 결과 섹션 기본 숨김 처리 */
 .hidden {
   display: none;
 }
 
+/* 결과 섹션 노출 시 스타일 */
 #result {
-  background-color: #F0F8FF;       /* 아주 연한 하늘색 (결과 배경) */
-  border-left: 4px solid #22669E;  /* 강조용 왼쪽 파란색 선 */
-  padding: 20px;
+  margin-top: 30px;
+  background-color: #FEFDF9; /* 아주 연한 아이보리 배경 */
+  border-left: 4px solid #C59F5F; /* 강조된 따뜻한 색 선 */
+  padding: 16px 20px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  min-height: 150px;               /* 검색 전에도 영역 간격 유지 */
 }
 
 #result h2 {
   font-size: 1.2rem;
   margin-bottom: 12px;
-  color: #134E7D;
+  color: #3C2F2F;
 }
 
 #result p {
   margin: 8px 0;
   font-size: 1rem;
-  color: #134E7D;
 }
 
 #result p strong {
-  color: #22669E; /* 파란색 강조 */
+  color: #5A4A3F; /* 텍스트 강조용 다크 브라운 */
 }
 
-
-/* ---------------------------------------------------
-   7) 반응형 보정
---------------------------------------------------- */
+/* 반응형: 모바일 화면에서 입력 박스가 꽉 차도록 */
 @media (max-width: 500px) {
   .container {
-    width: 95%;
-    margin: 20px auto;
+    margin: 20px 16px;
     padding: 10px;
   }
 
@@ -182,6 +141,6 @@ button#search-btn:active {
 
   button#search-btn {
     font-size: 0.95rem;
-    padding: 12px 0;
+    padding: 10px 0;
   }
 }
