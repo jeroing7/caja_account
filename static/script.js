@@ -21,6 +21,12 @@ const students = [
     accountId: 'kim.cheolsu@school.edu',
     accountPw: 'csKIM!456'
   }
+  {
+    studentNumber: '20241237',
+    studentName: '장영윤',
+    accountId: 'jeroing7',
+    accountPw: 'secret'
+  }
   // 필요에 따라 여기에 다른 학생 데이터를 추가하세요.
 ];
 
